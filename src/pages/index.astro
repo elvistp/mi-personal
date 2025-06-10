@@ -6,6 +6,10 @@ import LinkedIn from "../components/icons/LinkedIn.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import Mail from "../components/icons/Mail.astro";
+import Experiencia from "../components/Experiencia.astro";
+import Container from "../components/Container.astro";
+import Maleta from "../components/icons/Maleta.astro";
+import Code from "../components/icons/Code.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -15,14 +19,16 @@ import Mail from "../components/icons/Mail.astro";
   title="Portafolio Elvis, Desarrollador y programador web con 6 meses de experiencia"
   description="contratame porfavor"
 >
-  <main class="max-w-x1 text-left">
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+  <main class="px-4">
+    <Container class="py-44 pb-24">
       <img
         class="rounded-full w-12 h-12 mb-4"
         src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLM_YMOn41npXKC5fX-TSRfe20jO-nK1cfON36eskj5100UzlH4JMmJVsjNYxZPV4R0vw6DHIw0dqN-osUB5Iw7Q"
         alt="foto elvis"
       />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+      <h1
+        class="text-white text-3xl font-bold flex flex-row gap-x-4 pb-10 md:text-3xl pb-6 lg:pb-10"
+      >
         Hey, soy Elvis! <a
           href="https://www.linkedin.com/in/elvis-arturo-tantas-pizarro/"
           target="_blank"
@@ -32,7 +38,14 @@ import Mail from "../components/icons/Mail.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl text-wrap">Más de 2 años de experiencia</h2>
+      <h2 class="text-2xl text-wrap max-w-[700px]">
+        Soy técnico informático con casi dos años de experiencia en el sector
+        IT. A lo largo de este tiempo he desarrollado habilidades en distintas
+        herramientas y tecnologías, y me motiva seguir aprendiendo para crecer
+        profesionalmente. Me apasiona la informática y estoy comprometido con la
+        formación continua para aportar soluciones eficientes en cada proyecto o
+        desafío.
+      </h2>
 
       <nav class="flex gap-x-4 mt-8">
         <SocialPill
@@ -50,6 +63,24 @@ import Mail from "../components/icons/Mail.astro";
           elvistapi@gmail.com
         </SocialPill>
       </nav>
-    </section>
+    </Container>
+    <Container id="experiencia">
+      <h2
+        class="text-3xl text-white font-semibold mb-6 flex gap-x-2 items-center"
+      >
+        <Maleta class="size-9" />
+        Experiencia Laboral
+      </h2>
+      <Experiencia />
+    </Container>
+    <Container id="experiencia">
+      <h2
+        class="text-3xl text-white font-semibold mb-6 flex gap-x-2 items-center"
+      >
+        <Code class="size-9" />
+        Proyectos
+      </h2>
+      <Experiencia />
+    </Container>
   </main>
 </Layout>

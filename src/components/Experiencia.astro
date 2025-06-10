@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienciaItem.astro";
+const EXPERIENCIA = [
+  {
+    date: "Mayo 2025 - Junio 2025",
+    title: "Soporte Técnico",
+    company: "I3resouces (2025)",
+    description:
+      "Recepción de incidencias y peticiones a través de ServiceDesk.\nRevisión y reparación de software y hardware.\nActualizaciones e instalación de programas a través del System Center Configuration Manager.\nConfiguración de firmas electrónicas y certificados.\nConocimiento DHCP, DNS y Directorio Activo.\nGestión inventario de los equipos informáticos.",
+    link: "https://twitch.tv/midudev",
+  },
+  {
+    date: "Marzo 2023 - Diciembre 2025",
+    title: "Soporte Técnico On-site",
+    company: "Seidor ",
+    description:
+      "Revisiónsoftware y hardware. \nActualizaciones e instalación de programas.\nConfiguración de firmas electrónicas.\nConfiguración e instalación en red.\nInstalación, configuración de imprespras y drivers (Hp, Lekmark, etc..) \nMaquetación de equipos, instalación de S.O y configuración.\n Instalación de Switches, configuración TCP/IP.\nConocimiento DHCP y DNS, Directorio Activo.\nGestión inventario de los equipos informáticos.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIA.map((experiencia) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencia} />
+      </li>
+    ))
+  }
+</ol>
