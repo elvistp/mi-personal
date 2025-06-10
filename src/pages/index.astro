@@ -1,11 +1,55 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import "../styles/global.css";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Mail from "../components/icons/Mail.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Portafolio Elvis, Desarrollador y programador web con 6 meses de experiencia"
+  description="contratame porfavor"
+>
+  <main class="max-w-x1 text-left">
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <img
+        class="rounded-full w-12 h-12 mb-4"
+        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLM_YMOn41npXKC5fX-TSRfe20jO-nK1cfON36eskj5100UzlH4JMmJVsjNYxZPV4R0vw6DHIw0dqN-osUB5Iw7Q"
+        alt="foto elvis"
+      />
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hey, soy Elvis! <a
+          href="https://www.linkedin.com/in/elvis-arturo-tantas-pizarro/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-2xl text-wrap">Más de 2 años de experiencia</h2>
+
+      <nav class="flex gap-x-4 mt-8">
+        <SocialPill
+          href="https://www.linkedin.com/in/elvisarturo-tantaspizarro"
+        >
+          <LinkedIn class="size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/elvistp">
+          <GitHub class="size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="https://github.com/elvistp">
+          <Mail class="size-6" />
+          elvistapi@gmail.com
+        </SocialPill>
+      </nav>
+    </section>
+  </main>
 </Layout>

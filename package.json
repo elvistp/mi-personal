@@ -1,14 +1,19 @@
 {
-  "name": "mi-personal",
+  "name": "my-astro-tailwind-app",
   "type": "module",
-  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
   "dependencies": {
+    "@fontsource-variable/onest": "^5.2.9",
     "astro": "^5.9.1"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^5.1.5",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.17"
   }
 }
