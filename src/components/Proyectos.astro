@@ -22,7 +22,7 @@ const PROJECTOS = [
       "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
     link: "https://svgl.vercel.app/",
     github: "https://github.com/pheralb/svgl",
-    image: "/Proyects/svgl.png",
+    image1: "/Proyects/svgl.png",
     tags: [TAGS.JAVASCRIPT, TAGS.CSS],
   },
   {
@@ -30,14 +30,14 @@ const PROJECTOS = [
     description:
       "aplicación web que muestra el clima actual y el pronóstico para los próximos días. Utiliza la API de OpenWeatherMap para obtener datos meteorológicos en tiempo real.",
     link: "https://first-app-clima.netlify.app/",
-    image: "/Proyects/web-clima.jpeg",
+    image2: "/Proyects/web-clima.jpeg",
     tags: [TAGS.JAVASCRIPT, TAGS.CSS],
   },
 ];
 ---
 
 {
-  PROJECTOS.map(({ title, image, description, tags }) => (
+  PROJECTOS.map(({ title, image1, image2, description, tags }) => (
     <article>
       <h2 class="text-2xl font-semibold text-yellow-200 mt-6 mb-2">{title}</h2>
       <p class="text-lg mb-4 text-pretty">{description}</p>
@@ -53,11 +53,20 @@ const PROJECTOS = [
           </li>
         ))}
       </ul>
-      <img
-        class="rounded-lg transition duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] "
-        src={image}
-        alt={`captura de pantalla del proyecto ${image}`}
-      />
+      <a href="#" target="_blank">
+        <img
+          class="rounded-lg transition duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] "
+          src={image1}
+          alt={image1}
+        />
+      </a>
+      <a href="https://first-app-clima.netlify.app/" target="_blank">
+        <img
+          class="rounded-lg transition duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] "
+          src={image2}
+          alt={image2}
+        />
+      </a>
     </article>
   ))
 }
