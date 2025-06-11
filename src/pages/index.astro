@@ -10,6 +10,7 @@ import Experiencia from "../components/Experiencia.astro";
 import Container from "../components/Container.astro";
 import Maleta from "../components/icons/Maleta.astro";
 import Code from "../components/icons/Code.astro";
+import Proyectos from "../components/Proyectos.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -73,14 +74,15 @@ import Code from "../components/icons/Code.astro";
       </h2>
       <Experiencia />
     </Container>
-    <Container id="experiencia">
+    <Container id="proyectos" class="py-24">
       <h2
         class="text-3xl text-white font-semibold mb-6 flex gap-x-2 items-center"
       >
         <Code class="size-9" />
         Proyectos
       </h2>
-      <Experiencia />
+      <Proyectos />
+      <div class="h-24"></div>
     </Container>
   </main>
 </Layout>

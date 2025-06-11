@@ -1,0 +1,63 @@
+---
+import JavascriptIcon from "./icons/JavascriptIcon.astro";
+import CssIcon from "./icons/CssIcon.astro";
+
+const TAGS = {
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-500",
+    icon: JavascriptIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-500",
+    icon: CssIcon,
+  },
+};
+
+const PROJECTOS = [
+  {
+    title: "SVGL - A beautiful library with SVG logos",
+    description:
+      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    image: "/Proyects/svgl.png",
+    tags: [TAGS.JAVASCRIPT, TAGS.CSS],
+  },
+  {
+    title: "app tiempo",
+    description:
+      "aplicación web que muestra el clima actual y el pronóstico para los próximos días. Utiliza la API de OpenWeatherMap para obtener datos meteorológicos en tiempo real.",
+    link: "https://first-app-clima.netlify.app/",
+    image: "/Proyects/web-clima.jpeg",
+    tags: [TAGS.JAVASCRIPT, TAGS.CSS],
+  },
+];
+---
+
+{
+  PROJECTOS.map(({ title, image, description, tags }) => (
+    <article>
+      <h2 class="text-2xl font-semibold text-yellow-200 mt-6 mb-2">{title}</h2>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row mb-6">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded-lg transition duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] "
+        src={image}
+        alt={`captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
